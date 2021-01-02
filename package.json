@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "postinstall": "ng build --output-path SillaSolidaria  --aot --prod"
   },
   "engines": {
     "node": "v14.13.1",
@@ -17,6 +18,7 @@
     "@angular/animations": "~11.0.5",
     "@angular/common": "~11.0.5",
     "@angular/compiler": "~11.0.5",
+    "@angular/cli": "^11.0.5",
     "@angular/compiler-cli": "^11.0.5",
     "@angular/core": "~11.0.5",
     "@angular/forms": "~11.0.5",
