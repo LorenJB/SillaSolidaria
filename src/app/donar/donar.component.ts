@@ -6,7 +6,7 @@ import { SillasService } from '../sillas/sillas.service';
   templateUrl: 'donar.component.html',
   styles: [`
   .hight_screen{
-    height: 80.9vh;
+    height: 71vh;
   }
   `]
 })

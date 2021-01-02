@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './about-us.component.html',
   styles: [`
   .hight_screen{
-    height: 80.9vh;
+    height: 70vh;
   }
   `]
 })

@@ -10,7 +10,9 @@ import { SillasComponent } from './sillas/sillas.component';
 import { NavBarComponent } from './Layouts/nav-bar/nav-bar.component';
 import { DonarComponent } from './donar/donar.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,14 @@ import { AboutUsComponent } from './about-us/about-us.component';
     MainIndexComponent,
     SillasComponent,
     DonarComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
