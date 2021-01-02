@@ -1,0 +1,47 @@
+<div class="container mx-auto bg-fixed" style="background-image: url(../../assets/img/FondoSillas.jpeg)"> 
+    <prot-nav-bar></prot-nav-bar>
+    <div class="bg-red-50 rounded max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-3 mt-5 p-6 bg-opacity-80">
+        <div class="lg:text-center font-serif justify-items-center">
+            <h2 class="text-4xl text-black font-extrabold tracking-wide italic m-8">¿Con qué diseñador has compartido asiento?</h2>
+        </div>
+    </div>
+    <div class="relative text-gray-600 content-center max-w-7xl justify-items-center mx-auto lg:text-center">
+        <p class="italic text-black text-lg font-bold">Buscador</p>
+        <input type="search" name="buscar" placeholder="Buscar" class="bg-red-50 h-10 px-5 pr-10 rounded-full text-sm focus:outline-none border-red-300">
+        <button type="submit" class="right-0 top-0 mt-3 mr-4 pl-2"><i class="fas fa-search"></i></button>
+    </div>
+    <div>
+        <div class="lg:py-6 lg:flex lg:justify-center" *ngFor="let silla of sillas">
+            <div *ngIf=" silla.numero %2 == 0 else elseBlock">
+                <div class="bg-red-50 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
+                    <div class="lg:w-1/2">
+                        <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80')"></div>
+                    </div>
+                    <div class="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-1/2">
+                        <h2 class="text-3xl"><span class="text-indigo-600">{{ silla.nombre }}</span></h2>
+                        <p class="mt-4 text-gray-600">{{ silla.descripcion }}</p>
+                        <div class="mt-8 justify-end">
+                            <a href="#" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Donar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #elseBlock>
+                <div class="bg-red-50 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
+                    <div class="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-1/2">
+                        <h2 class="text-3xl"><span class="text-indigo-600">{{ silla.nombre }}</span></h2>
+                        <p class="mt-4 text-gray-600">{{ silla.descripcion }}</p>
+                        <div class="mt-8 justify-start">
+                            <a href="#" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Donar</a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80')"></div>
+                    </div>
+                </div>
+            </ng-template>
+        </div> 
+    </div>
+    <prot-footer></prot-footer>
+</div>
+

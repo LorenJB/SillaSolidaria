@@ -1,0 +1,24 @@
+  <nav class="bg-red-200 bottom-navigation ">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center h-16 justify-between">
+        <div>
+          <a href="" class="text-2xl text-gray-900 font-medium hover:bg-red-100 px-3 py-3 rounded-md "><i class="fas fa-home"></i> Inicio</a>
+        </div>
+        <div class="hidden sm:block sm:ml-6 ">
+            <div class="flex space-x-4">
+              <a class="text-gray-900 hover:bg-red-100 px-3 py-4 text-xl font-medium mouseHoverBorder" routerLink="/sillas" routerLinkActive="border-b-4 border-red-600 bg-red-100">
+                <i class="fas fa-chair"></i>&nbsp;Sillas</a>
+              <a class="text-gray-900 hover:bg-red-100 px-3 py-4 text-xl font-medium mouseHoverBorder" routerLink="/donar" routerLinkActive="border-b-4 border-red-600 bg-red-100">
+                <i class="fas fa-donate"></i>&nbsp;Donar</a>
+              <a class="text-gray-900 hover:bg-red-100 px-3 py-4 text-xl font-medium mouseHoverBorder" routerLink="/aboutUs" routerLinkActive="border-b-4 border-red-600 bg-red-100">
+                <i class="far fa-address-card"></i>&nbsp;Quiénes somos</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+<script>
+  $(".mouseHoverBorder").hover(function() {
+    $(this).addClass("border-b-4");
+  });
+</script>
