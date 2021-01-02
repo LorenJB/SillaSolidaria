@@ -6,7 +6,8 @@
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "postinstall": "ng build --output-path SillaSolidaria  --aot --prod"
   },
   "engines": {
     "node": "v14.13.1",
@@ -22,6 +23,8 @@
     "@angular/platform-browser": "~10.1.5",
     "@angular/platform-browser-dynamic": "~10.1.5",
     "@angular/router": "~10.1.5",
+    "@angular/cli": "^11.0.5",
+    "@angular/compiler-cli": "^10.2.4",
     "@fortawesome/angular-fontawesome": "^0.7.0",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -41,7 +44,7 @@
     "@angular-builders/custom-webpack": "^10.0.1",
     "@angular-devkit/build-angular": "~0.1001.6",
     "@angular/cli": "^11.0.5",
-    "@angular/compiler-cli": "^10.1.6",
+    "@angular/compiler-cli": "^10.2.4",
     "@types/node": "^12.11.1",
     "postcss": "^8.2.1",
     "postcss-import": "^14.0.0",
