@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "postinstall": "ng build --output-path SillaSolidaria  --aot --prod"
+    "postinstall": "ng build --aot --prod"
   },
   "engines": {
     "node": "v14.13.1",
