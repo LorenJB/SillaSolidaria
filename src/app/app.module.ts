@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,8 +14,9 @@ import { NavBarComponent } from './Layouts/nav-bar/nav-bar.component';
 import { DonarComponent } from './donar/donar.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FilterPipe } from './pipes/filter.pipe';
-import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalSillaComponent } from './Layouts/modal-silla/modal-silla.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,13 +27,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SillasComponent,
     DonarComponent,
     AboutUsComponent,
-    FilterPipe
+    FilterPipe,
+    ModalSillaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

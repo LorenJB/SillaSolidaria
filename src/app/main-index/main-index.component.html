@@ -27,7 +27,7 @@
                     <div class="my-1 px-1 w-full md:w-1/2 lg:my-3 lg:px-3 lg:w-1/4 transform hover:scale-110 motion-reduce:transform-none ease-out duration-700" 
                     *ngFor="let silla of sillas">
                         <article class="overflow-hidden rounded-lg shadow-lg bg-white">
-                            <button>
+                            <button (click)="openDialog(silla.numero)">
                                 <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
                             </button>
                             <header class="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -36,8 +36,8 @@
                                         {{ silla.nombre }}
                                     </a>
                                 </h1>
-                                <p class="text-grey-darker text-sm">
-                                    -----
+                                <p class="text-white text-sm">
+                                    <button class="hover:border-green-600 hover:text-green-500 px-4 py-2 shadow-sm rounded-md mr-3 hover:bg-green-100 bg-opacity-70 bg-gray-900" type="submit">Donar</button>
                                 </p>
                             </header>
                         </article>
