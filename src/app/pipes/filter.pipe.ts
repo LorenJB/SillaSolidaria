@@ -6,7 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(value: any, arg: any): any {
-    if (arg.trim() === '' || arg.length < 3 ) return value;
+    if (arg == '' ) return value;
+    if (arg.length < 2 ) return value;
     const resultSilla = [];
     for (const silla of value) {
       let nombre = silla.nombre.toUpperCase();
@@ -15,6 +16,7 @@ export class FilterPipe implements PipeTransform {
         resultSilla.push(silla);
       }
     }
+
     return resultSilla;
   }
 

@@ -14,6 +14,7 @@ import { ModalSillaComponent } from '../Layouts/modal-silla/modal-silla.componen
 export class MainIndexComponent implements OnInit {
 
   sillas: any = [];
+  urlContext: string;
 
   constructor(public dialog: MatDialog) {
     let sillas = new SillasService();
@@ -22,13 +23,14 @@ export class MainIndexComponent implements OnInit {
   }
 
   openDialog(numeroSilla): void {
-    const dialogRef = this.dialog.open(ModalSillaComponent,{
+    const dialogRef = this.dialog.open(ModalSillaComponent, {
       data: numeroSilla,
       hasBackdrop: true
     });
   }
 
   ngOnInit(): void {
+    this.urlContext = location.origin;
   }
 
 }

@@ -2,21 +2,20 @@
 <div class="container mx-auto bg-red-50">
     <div class="flex mb-10"></div>
     <div [@fadeAnimation]>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 p-8 rounded bg-white grid grid-rows-2 gap-4 grid-flow-col">
-            <div class="row-span-2">
-                <img src="../../assets/img/pruebaFondo1.jpg" class="rounded lg:visible md:visible sm:invisible">
+        <div class="max-w-7xl md:w-5/6 mx-auto px-4 sm:px-6 lg:px-8 mb-10 p-8 rounded md:max-w-6xl bg-white lg:grid lg:grid-rows-1 gap-4 lg:grid-flow-col">
+            <div class="lg:row-span-2 h-0">
+                <img src="../../assets/img/ImagenPortada.jpg" class="rounded lg:visible invisible lg:w-5/6">
             </div>
-            <div class="lg:text-center font-serif">
-                <div class="col-span-2">
+            <div class="text-center font-serif">
+                <div class="lg:col-span-1">
                     <p class="text-5xl text-black font-extrabold tracking-wide italic m-8">Retales de sueños</p>
                 </div>
-                <div class="row-span-2 col-span-2">
+                <div class="lg:row-span-1 lg:col-span-1">
                     <p class="mt-2 text-3xl leading-8 tracking-tight text-gray-900 sm:text-4xl">
                     Conoce nuestras sillas solidarias ...
                     </p>
                     <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-                    voluptatum cupiditate veritatis in accusamus quisquam.
+                        Nuestro proyecto, <span class="italic">“Retales de sueños”</span>, nace con la idea de hacer una llamada de reflexión hacia la sociedad, sobre todo, en estos tiempos tan difíciles que corremos repleto de dificultades económicas, precariedad laboral, inestabilidad familiar, etc., con el fin de ayudar a todas las familias posibles a través de la reutilización de tejidos que tenemos por casa. 
                     </p>
                 </div>
             </div>
@@ -24,20 +23,20 @@
         <div>
             <div class="container my-12 mx-auto px-4 md:px-12">
                 <div class="flex flex-wrap -mx-1 lg:-mx-3">
-                    <div class="my-1 px-1 w-full md:w-1/2 lg:my-3 lg:px-3 lg:w-1/4 transform hover:scale-110 motion-reduce:transform-none ease-out duration-700" 
+                    <div class="my-1 px-1 w-1/2 md:w-1/2 lg:my-3 lg:px-3 lg:w-1/6 transform hover:scale-110 motion-reduce:transform-none ease-out duration-700" 
                     *ngFor="let silla of sillas">
                         <article class="overflow-hidden rounded-lg shadow-lg bg-white">
                             <button (click)="openDialog(silla.numero)">
-                                <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
+                                <img alt="Placeholder" class="block w-full lg:h-1/6" src="../../assets/img/sillas/{{silla.imagen}}_sil.jpg">
                             </button>
                             <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                                 <h1 class="text-lg">
-                                    <a class="no-underline hover:underline text-black" href="#">
+                                    <p class="no-underline hover:underline text-black">
                                         {{ silla.nombre }}
-                                    </a>
+                                    </p>
                                 </h1>
                                 <p class="text-white text-sm">
-                                    <button class="hover:border-green-600 hover:text-green-500 px-4 py-2 shadow-sm rounded-md mr-3 hover:bg-green-100 bg-opacity-70 bg-gray-900" type="submit">Donar</button>
+                                    <a href="{{urlContext}}/donar/{{silla.numero}}" class="hover:border-green-600 hover:text-green-500 px-4 py-2 shadow-sm rounded-md hover:bg-green-100 bg-opacity-70 bg-gray-900" type="submit">Donar</a>
                                 </p>
                             </header>
                         </article>

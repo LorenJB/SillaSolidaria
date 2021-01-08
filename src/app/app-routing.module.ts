@@ -8,8 +8,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 const routes: Routes = [
   { path: '', component: MainIndexComponent },
   { path: 'sillas', component: SillasComponent },
-  { path: 'donar', component: DonarComponent},
-  { path: 'aboutUs', component: AboutUsComponent},
+  { path: 'donar', component: DonarComponent },
+  { path: 'donar/:silla', component: DonarComponent },
+  { path: 'aboutUs', component: AboutUsComponent },
   { path: '**', component: MainIndexComponent }
 ];
 
