@@ -24,7 +24,10 @@ export class MainIndexComponent implements OnInit {
 
   openDialog(numeroSilla): void {
     const dialogRef = this.dialog.open(ModalSillaComponent, {
-      data: numeroSilla,
+      data:{
+        "numero" : numeroSilla,
+        "formulario" : "main"
+      },
       hasBackdrop: true
     });
   }

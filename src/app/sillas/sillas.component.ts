@@ -19,13 +19,14 @@ export class SillasComponent implements OnInit {
   constructor(public dialog: MatDialog) {
     let sillas = new SillasService();
     this.sillas = sillas.getSillas();
-
-
   }
 
   openDialog(numeroSilla): void {
     const dialogRef = this.dialog.open(ModalSillaComponent, {
-      data: numeroSilla,
+      data: {
+        "numero": numeroSilla,
+        "formulario" : "sillas"
+      },
       hasBackdrop: true
     });
   }
